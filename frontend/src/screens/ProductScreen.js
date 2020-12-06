@@ -5,7 +5,7 @@ import {Row, Col, Image, ListGroup,  Card, Button, Form} from 'react-bootstrap'
 import Rating from '../components/Rating'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
-import {listProductsDetails} from '../actions/productActions'
+import {listProductDetails} from '../actions/productActions'
 
 const ProductScreen = ({history, match}) => {
 
@@ -18,7 +18,7 @@ const ProductScreen = ({history, match}) => {
 
     useEffect( () => {
        
-        dispatch(listProductsDetails(match.params.id))
+        dispatch(listProductDetails(match.params.id))
 
     }, [dispatch, match])
 
